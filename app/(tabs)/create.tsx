@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { theme } from '@/constants/theme';
-import { Calendar, Clock, MapPin, Users, ChevronRight } from 'lucide-react-native';
+import { Calendar, Clock, MapPin, Users } from 'lucide-react-native';
 import { router } from 'expo-router';
 import Animated, { FadeInUp, FadeOutDown } from 'react-native-reanimated';
 
@@ -83,7 +83,6 @@ export default function CreateScreen() {
               <Text style={styles.fieldLabel}>Date</Text>
               <Text style={styles.fieldValue}>Select date</Text>
             </View>
-            <ChevronRight size={20} color={theme.colors.textSecondary} />
           </AnimatedTouchableOpacity>
 
           <AnimatedTouchableOpacity 
@@ -97,7 +96,6 @@ export default function CreateScreen() {
               <Text style={styles.fieldLabel}>Time</Text>
               <Text style={styles.fieldValue}>Select time</Text>
             </View>
-            <ChevronRight size={20} color={theme.colors.textSecondary} />
           </AnimatedTouchableOpacity>
 
           <AnimatedTouchableOpacity 
@@ -111,7 +109,6 @@ export default function CreateScreen() {
               <Text style={styles.fieldLabel}>Location</Text>
               <Text style={styles.fieldValue}>Add location</Text>
             </View>
-            <ChevronRight size={20} color={theme.colors.textSecondary} />
           </AnimatedTouchableOpacity>
 
           <AnimatedTouchableOpacity 
@@ -125,7 +122,6 @@ export default function CreateScreen() {
               <Text style={styles.fieldLabel}>Participants</Text>
               <Text style={styles.fieldValue}>Add participants</Text>
             </View>
-            <ChevronRight size={20} color={theme.colors.textSecondary} />
           </AnimatedTouchableOpacity>
 
           <TextInput
