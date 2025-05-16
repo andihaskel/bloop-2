@@ -35,8 +35,10 @@ export default function ItemCard({
   categoryIcon
 }: ItemCardProps) {
   const translateX = useSharedValue(0);
-  const category = getCategoryById(item.categoryId);
-  const categoryColor = category ? theme.colors.categories[category.color as keyof typeof theme.colors.categories] : theme.colors.card;
+  const category = item.categoryId ? getCategoryById(item.categoryId) : null;
+  const categoryColor = category && category.color 
+    ? theme.colors.categories[category.color as keyof typeof theme.colors.categories] 
+    : theme.colors.card;
 
   const panGesture = Gesture.Pan()
     .activeOffsetX([-10, 10])
